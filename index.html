@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,20 +13,76 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 
     <!-- Icon | Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Style Custom -->
-    <link rel="stylesheet" href="cover.css">
+    <!-- <link rel="stylesheet" href="cover.css"> -->
 
     <style>
         .banner {
-            padding: 20px;
-            height: 650px;
+            /* padding: 20px; */
+            min-height: 100vh;
             /* Background Image */
-            background-image: url('logo-sby.jpg'); /* Ganti 'your-image-url.jpg' dengan URL gambar Anda */
+            background-image: url('logo-sby.jpg');
+            /* Ganti 'your-image-url.jpg' dengan URL gambar Anda */
             background-size: cover;
             background-position: center;
-            color: #ffffff; /* Warna teks agar terlihat jelas di atas gambar */
+            color: #ffffff;
+            /* Warna teks agar terlihat jelas di atas gambar */
+        }
+
+        .scroll-down {
+            height: 50px;
+            width: 30px;
+            border: 2px solid rgb(228, 0, 0);
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        .scroll-down::before,
+        .scroll-down::after {
+            content: "";
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            height: 10px;
+            width: 10px;
+            transform: translate(-50%, -100%) rotate(45deg);
+            border: 2px solid rgb(228, 0, 0);
+            border-top: transparent;
+            border-left: transparent;
+            animation: scroll-down 1s ease-in-out infinite;
+        }
+
+        .scroll-down::before {
+            top: 30%;
+            animation-delay: 0.3s;
+            /* animation: scroll-down 1s ease-in-out infinite; */
+        }
+
+        @keyframes scroll-down {
+            0% {
+                /* top:20%; */
+                opacity: 0;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            60% {
+                opacity: 1;
+            }
+
+            100% {
+                top: 90%;
+                opacity: 0;
+            }
         }
     </style>
 
@@ -37,7 +94,7 @@
         <div class="header">
             <div class="row">
                 <div class="col">
-                  <h2>Stories Of Surabaya</h2>
+                    <h2>Stories Of Surabaya</h2>
                 </div>
                 <div class="col">
                     <div class="d-flex justify-content-end">
@@ -50,7 +107,7 @@
                         <div class="p-2">
                             <a href="" class="text-decoration-none fs-5 text-dark">Contact</a>
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -60,19 +117,58 @@
     </div>
 
     <!-- Banner -->
-    <div class="banner bg-secondary d-flex align-items-center">
-        <div class="container h-auto p-3 mx-auto justify-content-center text-dark">
-            <p class="mb-1 fw-semibold">SURABAYA ADVENTURE</p>
-            <h3 class="fw-bold">EXPLORING THE ESSENCE <br>
-            OF INDONESIA'S CITY OF HEROES</h3>
-          
-            <div class="scroll-bottom text-center">
-                <a href="" class="text-decoration-none text-dark">
-                    <i class="fa-solid fa-circle-chevron-down fs-1"></i>
-                </a>
+    <div class="banner bg-secondary">
+        <div class="container p-3 mx-auto text-dark " style="height: 80vh;">
+            <div class="row align-items-center h-75">
+                <div class="col">
+                    <p class="mb-1 fw-semibold">SURABAYA ADVENTURE</p>
+                    <h3 class="fw-bold">EXPLORING THE ESSENCE <br>
+                        OF INDONESIA'S CITY OF HEROES</h3>
+
+                </div>
+            </div>
+            <div class="row h-25 align-content-end text-center">
+                <div class="col">
+                    <a href="#scroll-1" class="text-decoration-none text-dark">
+                        <div class="scroll-down"></div>
+                        <!-- <i class="fa-solid fa-circle-chevron-down fs-1"></i> -->
+                    </a>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Section 1  -->
+    <section id="scroll-1" class="vh-100">
+        <div class="container jumbo h-100">
+            <div class="row align-items-center h-100 jumbotron">
+                <div class="col">
+                    <h2>Let Big Data Change the Game</h2>
+                    <p>WebCorpCo is all about making sure your marketing stack is in alignment with your company as well as
+                        the customers you serve. There is no 'one size fits all' approach to marketing. Every business is
+                        unique, customers are unique, and your marketing should be as well.</p>
+                    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function () {
+            $('#icon-scroll').on('click', function (e) {
+                e.preventDefault();
+
+                $('html, body').animate(
+                    {
+                        scrollTop: $($(this).attr('href')).offset().top,
+                    },
+                    500,
+                    'linear'
+                );
+            });
+        });
+
+    </script>
 </body>
 
 </html>
