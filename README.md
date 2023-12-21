@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://revealjs.com">
-  <img src="https://hakim-static.s3.amazonaws.com/reveal-js/logo/v1/reveal-black-text-sticker.png" alt="reveal.js" width="500">
+<!--   <img src="https://hakim-static.s3.amazonaws.com/reveal-js/logo/v1/reveal-black-text-sticker.png" alt="reveal.js" width="500"> -->
   </a>
   <br><br>
   <a href="https://github.com/hakimel/reveal.js/actions"><img src="https://github.com/hakimel/reveal.js/workflows/tests/badge.svg"></a>
@@ -37,7 +37,7 @@ Hakim's open source work is supported by <a href="https://github.com/sponsors/ha
 
 ---
 
-### Getting started
+### Getting started reveal.js
 - 🚀 [Install reveal.js](https://revealjs.com/installation)
 - 👀 [View the demo presentation](https://revealjs.com/demo)
 - 📖 [Read the documentation](https://revealjs.com/markup/)
