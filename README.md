@@ -14,10 +14,7 @@
 [Watch our introduction video](#video) and explore the rich history of Surabaya.
 
 ## Table of Contents
-- [Ancient Surabaya](#ancient-surabaya)
-- [Colonial Era](#colonial-era)
-- [Independence Struggle](#independence-struggle)
-- [Modern Surabaya](#modern-surabaya)
+- [Tugu Pahlawan](#tugu-surabaya)
 
 ## Video Introduction
 <div id="video" class="video-banner">
@@ -42,32 +39,10 @@
     </div>
 </div>
 
-## Ancient Surabaya
+## Tugu Surabaya
 Surabaya has a rich history dating back to ancient times. It was a vibrant trading port and a center of culture.
 
-...
-
-## Colonial Era
-During the colonial period, Surabaya witnessed significant changes. Learn about the impact of colonization on the city.
-
-...
-
-## Independence Struggle
-Surabaya played a crucial role in Indonesia's fight for independence. Explore the stories of bravery and resilience.
-
-...
-
-## Modern Surabaya
-In the modern era, Surabaya has transformed into a bustling metropolis while preserving its cultural heritage. Discover the city's contemporary charm.
-
-...
-
-## Explore More
-Continue your journey through Surabaya's history. [Read more](#ancient-surabaya).
-
 ---
-
-**Note:** Replace `"your-history-video.mp4"` with the actual video file for the introduction. Ensure that the video file is placed in the same directory as your Markdown file.
 
 Feel free to customize and add more sections or details to fit the specific content and style you desire for the website.
 
