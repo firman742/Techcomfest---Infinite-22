@@ -1,42 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stories Of Surabaya | Index</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-reboot.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-utilities.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <!-- Icon | Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Font Vast Shadow -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap" rel="stylesheet">
     <!-- Style Custom -->
-    <!-- <link rel="stylesheet" href="cover.css"> -->
-
     <style>
         .banner {
-            /* padding: 20px; */
+            position: relative;
             min-height: 100vh;
-            /* Background Image */
-            background-image: url('logo-sby.jpg');
-            /* Ganti 'your-image-url.jpg' dengan URL gambar Anda */
-            background-size: cover;
-            background-position: center;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Tambahkan efek overlay */
+        }
+
+        .banner-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
             color: #ffffff;
-            /* Warna teks agar terlihat jelas di atas gambar */
         }
 
         .scroll-down {
             height: 50px;
             width: 30px;
-            border: 2px solid rgb(228, 0, 0);
+            border: 2px solid rgb(244, 244, 244);
             position: absolute;
             left: 50%;
             bottom: 20px;
@@ -53,7 +68,7 @@
             height: 10px;
             width: 10px;
             transform: translate(-50%, -100%) rotate(45deg);
-            border: 2px solid rgb(228, 0, 0);
+            border: 2px solid rgb(255, 255, 255);
             border-top: transparent;
             border-left: transparent;
             animation: scroll-down 1s ease-in-out infinite;
@@ -62,12 +77,28 @@
         .scroll-down::before {
             top: 30%;
             animation-delay: 0.3s;
-            /* animation: scroll-down 1s ease-in-out infinite; */
         }
 
+        .jumbo-bg {
+            background-image: url('assets/logo-section.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .jumbo-bg h2 {
+            color: #de8314; /* Text color */
+            font-family: "vast shadow";
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /* Text shadow */
+
+        }
+
+        .card-bg {
+            background-image: url('assets/card-1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
         @keyframes scroll-down {
             0% {
-                /* top:20%; */
                 opacity: 0;
             }
 
@@ -85,53 +116,28 @@
             }
         }
     </style>
-
 </head>
 
 <body>
-    <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <!-- Header -->
-        <div class="header">
-            <div class="row">
-                <div class="col">
-                    <h2>Stories Of Surabaya</h2>
-                </div>
-                <div class="col">
-                    <div class="d-flex justify-content-end">
-                        <div class="p-2">
-                            <a href="#" class="text-decoration-none fs-5 text-dark">Home</a>
-                        </div>
-                        <div class="p-2">
-                            <a href="" class="text-decoration-none fs-5 text-dark">Stories</a>
-                        </div>
-                        <div class="p-2">
-                            <a href="" class="text-decoration-none fs-5 text-dark">Contact</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Banner -->
-
-    </div>
-
     <!-- Banner -->
-    <div class="banner bg-secondary">
-        <div class="container p-3 mx-auto text-dark " style="height: 80vh;">
-            <div class="row align-items-center h-75">
+    <div class="banner">
+        <video autoplay muted loop>
+            <source src="assets/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+        <div class="banner-content container p-3 mx-auto text-start" style="height: 80vh;">
+            <div class="row align-items-end h-75">
                 <div class="col">
-                    <p class="mb-1 fw-semibold">SURABAYA ADVENTURE</p>
-                    <h3 class="fw-bold">EXPLORING THE ESSENCE <br>
-                        OF INDONESIA'S CITY OF HEROES</h3>
-
+                    <h4 class="mb-1 fw-light">SURABAYA ADVENTURE</h4>
+                    <h2 class="fw-bold">EXPLORING THE ESSENCE <br>
+                        OF INDONESIA'S CITY OF HEROES</h2>
                 </div>
             </div>
             <div class="row h-25 align-content-end text-center">
                 <div class="col">
-                    <a href="#scroll-1" class="text-decoration-none text-dark">
+                    <a href="#scroll-1" class="text-decoration-none">
                         <div class="scroll-down"></div>
-                        <!-- <i class="fa-solid fa-circle-chevron-down fs-1"></i> -->
                     </a>
                 </div>
             </div>
@@ -139,15 +145,26 @@
     </div>
 
     <!-- Section 1  -->
-    <section id="scroll-1" class="vh-100">
-        <div class="container jumbo h-100">
-            <div class="row align-items-center h-100 jumbotron">
+    <section id="scroll-1" class="vh-100 jumbo-bg">
+        <div class="container h-100">
+            <div class="row align-items-start text-center pt-5 h-25 jumbotron">
                 <div class="col">
-                    <h2>Let Big Data Change the Game</h2>
-                    <p>WebCorpCo is all about making sure your marketing stack is in alignment with your company as well as
-                        the customers you serve. There is no 'one size fits all' approach to marketing. Every business is
-                        unique, customers are unique, and your marketing should be as well.</p>
-                    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+                    <h2 class="fw-bolder">LET'S KNOW AND LEARN 
+                    <br> HISTORY OF SURABAYA</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center h-50 jumbotron">
+                <div class="card w-50 h-100 border border-2 rounded-4 card-bg">
+                    <div class="card-body d-flex align-items-end text-center">
+                      <h3 class="card-text text-white fw-bolder ps-5">
+                        <a href="/single.html" class="text-decoration-none text-white"><i class="fa-solid fa-play"></i> Play</a>
+                      </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-end text-center pt-5 h-25 jumbotron">
+                <div class="col">
+                    <h4 class="text-white fw-bold">INFINITE 22 @2023</h4>
                 </div>
             </div>
         </div>
@@ -155,7 +172,7 @@
 
     <script>
         $(document).ready(function () {
-            $('#icon-scroll').on('click', function (e) {
+            $('.scroll-down').on('click', function (e) {
                 e.preventDefault();
 
                 $('html, body').animate(
@@ -167,8 +184,8 @@
                 );
             });
         });
-
     </script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 </body>
-
 </html>
